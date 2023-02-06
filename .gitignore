@@ -17,3 +17,5 @@ notes
 !**/*.sample.values.yaml
 !**/*.sample.values.yml
 !**/*.sample.env
+keys/**
+!keys/.gitkeep
