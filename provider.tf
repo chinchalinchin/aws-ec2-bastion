@@ -14,32 +14,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.25"
     }
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~>3.0.0"
-    }
-    time = {
-      source = "hashicorp/time"
-      version = "~>0.7.2"
-    }
-    kubernetes = {
-      source  = "hashicorp/kubernetes"
-      version = "~> 2.0.0"
-    }
-    helm = {
-      source = "hashicorp/helm"
-      version = "~> 2.6.0"
-    }
   }
 }
 
-provider "azurerm" {
-  features {}
-}
 
 provider "aws" {
-  region = var.region
-
   ### Commented out For Demo - Use this Block for integration into an existing Terraform implementation if you already have predefined role ###
 
   # assume_role {

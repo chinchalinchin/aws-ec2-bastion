@@ -93,7 +93,7 @@ resource "aws_instance" "bastion_host" {
                                                             "${path.root}/scripts/ec2/user-data.sh",
                                                             {
                                                                 AWS_DEFAULT_REGION  = "${data.aws_region.current.name}"
-                                                                AWS_ACCOUNT_ID      = "${data.aws_caller_identity.account_id}"
+                                                                AWS_ACCOUNT_ID      = "${data.aws_caller_identity.current.account_id}"
                                                             }
                                                         )
     vpc_security_group_ids                              = concat(
