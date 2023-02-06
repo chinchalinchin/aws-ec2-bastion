@@ -38,7 +38,7 @@ resource "aws_security_group_rule" "remote_access_ingress" {
     protocol                                            = "-1"
     cidr_blocks                                         = concat(
                                                             var.source_ips,
-                                                            var.cidr_block
+                                                            [ data.aws_vpc.vpc.cidr_block ]
                                                         )
     security_group_id                                   = aws_security_group.remote_access_sg.id
 } 

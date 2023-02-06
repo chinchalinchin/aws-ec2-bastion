@@ -5,13 +5,6 @@ variable "source_ips" {
 }
 
 
-variable "cidr_block" {
-    description                         = "CIDR Block for VPC. Note: if deploying from main, this will be pulled from a Terraform data source. Otherwise, it must be inputted."
-    type                                = any
-    sensitive                           = true
-}
-
-
 variable "vpc_config" {
     description                         = "VPC configuration for Bastion deployment."
     type = object({
