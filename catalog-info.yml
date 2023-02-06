@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: data-ops-infrastructure
+  title: Data Ops Infrastructure
+  description: Resources to support BrightLab's Digital Twin Data Pipeline
+  links:
+    - url: https://pages.github.boozallencsn.com/AutomationLibrary/data-ops-infrastructure/index.html
+      title: Documentation
+  annotations:
+    github.com/project-slug: AutomationLibrary/data-ops-infrastructure
+  tags:
+    - aws
+    - terraform
+    - ec2
+    - digitaltwin
+    - lambda
+    - s3
+spec:
+  type: library
+  lifecycle: production
+  owner: AutomationLibrary/BrightLabs
