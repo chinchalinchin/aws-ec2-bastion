@@ -10,14 +10,16 @@
 //  NOTE: Do not commit physical IDs or ARNs to version control!
 //      See previous note!
 # vpc_config  = {
-#     "vpc_id": "vpc-xxxx",
-#     "public_subnet_ids": ["subnet-xxxx", "subnet-xxxx"]
-#     "private_subnet_ids": ["subnet-xxxx", "subnet-xxxx"]
+#     "id": "vpc-xxxx",
+#     "subnet_id": "subnet-xxxx",
 #     "security_group_ids": ["sg-xxxx", "sg-xxxx"]
 # }
 
-bastion_config = {
+bastion_config  = {
     ami                         = "ami-0b0ea68c435eb488d"
-    key_name                    = "automation_library_key"
     instance_profile            = "AWSRoleforEC2"
+    key_name                    = null
+    public                      = true
 }
+
+project         = "autolib"

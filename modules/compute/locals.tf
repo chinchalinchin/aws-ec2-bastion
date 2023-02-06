@@ -18,4 +18,6 @@ locals {
                                                             Owned           = "bah-625518"
                                                             Service         = "kms"
                                                         }
+    ssh_key_algorithm                                   = "RSA"
+    ssh_key_bits                                        = 4096
 }
