@@ -94,6 +94,9 @@ resource "aws_instance" "bastion_host" {
                                                             {
                                                                 AWS_DEFAULT_REGION  = "${data.aws_region.current.name}"
                                                                 AWS_ACCOUNT_ID      = "${data.aws_caller_identity.current.account_id}"
+                                                                TF_VERSION          = "1.3.7"
+                                                                SYS_ARCH            = "amd64"
+                                                                OS                  = "linux"
                                                             }
                                                         )
     vpc_security_group_ids                              = concat(
