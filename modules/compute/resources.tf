@@ -24,14 +24,14 @@ resource "local_file" "tf-key" {
 
 resource "aws_security_group" "remote_access_sg" {
     name                                                = "${var.project}-bastion-remote-access"
-    description                                         = "data-ops bastion host security group"
+    description                                         = "${var.project} bastion host security group"
     vpc_id                                              = var.vpc_config.id
     tags                                                = local.ec2_tags
 }
 
 
 resource "aws_security_group_rule" "remote_access_ingress" {
-    description                                         = "Restrict data-ops access to IP whitelist and VPC CIDR block"
+    description                                         = "Restrict access to IP whitelist and VPC CIDR block"
     type                                                = "ingress"
     from_port                                           = 0
     to_port                                             = 0

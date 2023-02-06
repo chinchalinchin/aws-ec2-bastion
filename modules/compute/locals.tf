@@ -1,12 +1,8 @@
 locals {
-    default_access_cidr                                 = [ 
-                                                            "0.0.0.0/0" 
-                                                        ]
-    # `ec2_*` locals configure the bastion host, not the EKS node group instance attributes.
     ec2_tags                                            = {
                                                             Organization    = "BrightLabs"
                                                             Team            = "AutomationLibrary"
-                                                            Project         = "data-ops-infrastructure"
+                                                            Project         = "aws-ec2-bastion"
                                                             Owned           = "bah-625518"
                                                             Service         = "ec2"
                                                         }
@@ -14,7 +10,7 @@ locals {
     kms_tags                                            = {
                                                             Organization    = "BrightLabs"
                                                             Team            = "AutomationLibrary"
-                                                            Project         = "data-ops-infrastructure"
+                                                            Project         = "aws-ec2-bastion"
                                                             Owned           = "bah-625518"
                                                             Service         = "kms"
                                                         }
