@@ -1,21 +1,18 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: data-ops-infrastructure
-  title: Data Ops Infrastructure
-  description: Resources to support BrightLab's Digital Twin Data Pipeline
+  name: aws-ec2-bastion
+  title: AWS EC2 Bastion host
+  description: Resources for deploying an EC2 bastion host into a VPC
   links:
-    - url: https://pages.github.boozallencsn.com/AutomationLibrary/data-ops-infrastructure/index.html
+    - url: https://pages.github.boozallencsn.com/AutomationLibrary/aws-ec2-bastion/index.html
       title: Documentation
   annotations:
-    github.com/project-slug: AutomationLibrary/data-ops-infrastructure
+    github.com/project-slug: AutomationLibrary/aws-ec2-bastion
   tags:
     - aws
     - terraform
     - ec2
-    - digitaltwin
-    - lambda
-    - s3
 spec:
   type: library
   lifecycle: production
